@@ -82,12 +82,6 @@ public class CalculatorUI {
         window.setVisible(true);
     }
 
-    public double calculate(double firstNumber, double secondNumber, char operator) {
-        Calculator calc = new Calculator();
-        return calc.calculate(firstNumber, secondNumber, operator);
-        
-    }
-
     private void initThemeSelector() {
         comboTheme = createComboBox(themesMap.keySet().toArray(new String[0]), 230, 30, "Theme");
         comboTheme.addItemListener(event -> {
@@ -163,7 +157,7 @@ public class CalculatorUI {
             if (!Pattern.matches(DOUBLE_OR_NUMBER_REGEX, inputScreen.getText()) || !go)
                 return;
 
-            typedValue = calculate(typedValue, Double.parseDouble(inputScreen.getText()), selectedOperator);
+            typedValue = Calculator.calculate(typedValue, Double.parseDouble(inputScreen.getText()), selectedOperator);
             if (Pattern.matches("[-]?[\\d]+[.][0]*", String.valueOf(typedValue))) {
                 inputScreen.setText(String.valueOf((int) typedValue));
             } else {
@@ -180,7 +174,7 @@ public class CalculatorUI {
                 return;
 
             if (go) {
-                typedValue = calculate(typedValue, Double.parseDouble(inputScreen.getText()), selectedOperator);
+                typedValue = Calculator.calculate(typedValue, Double.parseDouble(inputScreen.getText()), selectedOperator);
                 if (Pattern.matches("[-]?[\\d]+[.][0]*", String.valueOf(typedValue))) {
                     inputScreen.setText(String.valueOf((int) typedValue));
                 } else {
@@ -245,7 +239,7 @@ public class CalculatorUI {
                 return;
 
             if (go) {
-                typedValue = calculate(typedValue, Double.parseDouble(inputScreen.getText()), selectedOperator);
+                typedValue = Calculator.calculate(typedValue, Double.parseDouble(inputScreen.getText()), selectedOperator);
                 if (Pattern.matches("[-]?[\\d]+[.][0]*", String.valueOf(typedValue))) {
                     inputScreen.setText(String.valueOf((int) typedValue));
                 } else {
@@ -310,7 +304,7 @@ public class CalculatorUI {
                 return;
 
             if (go) {
-                typedValue = calculate(typedValue, Double.parseDouble(inputScreen.getText()), selectedOperator);
+                typedValue = Calculator.calculate(typedValue, Double.parseDouble(inputScreen.getText()), selectedOperator);
                 if (Pattern.matches("[-]?[\\d]+[.][0]*", String.valueOf(typedValue))) {
                     inputScreen.setText(String.valueOf((int) typedValue));
                 } else {
@@ -376,7 +370,7 @@ public class CalculatorUI {
                 return;
 
             if (go) {
-                typedValue = calculate(typedValue, Double.parseDouble(inputScreen.getText()), selectedOperator);
+                typedValue = Calculator.calculate(typedValue, Double.parseDouble(inputScreen.getText()), selectedOperator);
                 if (Pattern.matches("[-]?[\\d]+[.][0]*", String.valueOf(typedValue))) {
                     inputScreen.setText(String.valueOf((int) typedValue));
                 } else {
@@ -424,7 +418,7 @@ public class CalculatorUI {
                 return;
 
             if (go) {
-                typedValue = calculate(typedValue, Double.parseDouble(inputScreen.getText()), selectedOperator);
+                typedValue = Calculator.calculate(typedValue, Double.parseDouble(inputScreen.getText()), selectedOperator);
                 if (Pattern.matches("[-]?[\\d]+[.][0]*", String.valueOf(typedValue))) {
                     inputScreen.setText(String.valueOf((int) typedValue));
                 } else {
@@ -460,7 +454,7 @@ public class CalculatorUI {
                 return;
 
             if (go) {
-                typedValue = calculate(typedValue, Double.parseDouble(inputScreen.getText()), selectedOperator);
+                typedValue = Calculator.calculate(typedValue, Double.parseDouble(inputScreen.getText()), selectedOperator);
                 if (Pattern.matches("[-]?[\\d]+[.][0]*", String.valueOf(typedValue))) {
                     inputScreen.setText(String.valueOf((int) typedValue));
                 } else {
