@@ -2,7 +2,8 @@ package com.backend;
 
 public class Calculator {
     
-
+    final char _PLUS = '+';
+    final char _MINUS = '-';
     
     public Calculator(){
 
@@ -10,9 +11,9 @@ public class Calculator {
 
     public double calculate(double firstNumber, double secondNumber, char operator) {
         switch (operator) {
-            case '+':
+            case _PLUS:
                 return firstNumber + secondNumber;
-            case '-':
+            case _MINUS:
                 return firstNumber - secondNumber;
             case '*':
                 return firstNumber * secondNumber;
