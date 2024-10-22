@@ -2,7 +2,7 @@ package com.backend;
 
 public class Calculator {
     
-    final char _PLUS = '+';
+    final char _PLUS = 'D';
     final char _MINUS = '-';
     
     public Calculator(){
