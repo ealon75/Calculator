@@ -1,5 +1,6 @@
 package com.backend;
 
+/// Calculator class 
 public class Calculator {
     
     private static final char _PLUS = '+';
