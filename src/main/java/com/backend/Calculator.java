@@ -1,27 +1,33 @@
 package com.backend;
 
+/// Calculator class 
 public class Calculator {
     
-    final char _PLUS = 'D';
-    final char _MINUS = '-';
+    private static final char _PLUS = '+';
+    private static final char _MINUS = '-';
+    private static final char _MULT = '*';
+    private static final char _DIV = '/';
+    private static final char _PRE = '%';
+    private static final char _POW = '^';
+
     
     public Calculator(){
 
     }
 
-    public double calculate(double firstNumber, double secondNumber, char operator) {
+    public static double calculate(double firstNumber, double secondNumber, char operator) {
         switch (operator) {
             case _PLUS:
                 return firstNumber + secondNumber;
             case _MINUS:
                 return firstNumber - secondNumber;
-            case '*':
+            case _MULT:
                 return firstNumber * secondNumber;
-            case '/':
+            case _DIV:
                 return firstNumber / secondNumber;
-            case '%':
+            case _PRE:
                 return firstNumber % secondNumber;
-            case '^':
+            case _POW:
                 return Math.pow(firstNumber, secondNumber);
             default:
                 return secondNumber;
