@@ -7,6 +7,7 @@ public class Calculator {
     private static final char _MULT = '*';
     private static final char _DIV = '/';
     private static final char _PRE = '%';
+    private static final char _POW = '^';
     
     public Calculator(){
 
@@ -24,7 +25,7 @@ public class Calculator {
                 return firstNumber / secondNumber;
             case _PRE:
                 return firstNumber % secondNumber;
-            case '^':
+            case _POW:
                 return Math.pow(firstNumber, secondNumber);
             default:
                 return secondNumber;
