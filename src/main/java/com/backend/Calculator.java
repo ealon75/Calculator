@@ -9,6 +9,7 @@ public class Calculator {
     private static final char _DIV = '/';
     private static final char _PRE = '%';
     private static final char _POW = '^';
+
     
     public Calculator(){
 
